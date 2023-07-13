@@ -2,6 +2,7 @@ import { MovieItem as MovieItemType } from "@/types/movie";
 import { FC } from "react";
 import MovieItem from "./MovieItem";
 import Pagination from "./Pagination";
+import LoadingScreen from "./Loading";
 
 interface MainGridProps {
   title: string;
@@ -31,13 +32,16 @@ const MainGrid: FC<MainGridProps> = ({
             onPageChange={onPageChange}
           />
         </div>
-        {isLoading && <h1>Loading.......</h1>}
-        <div className="grid w-full grid-cols-2 gap-5 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-5">
-          {list &&
-            list.map((item: MovieItemType, key) => (
-              <MovieItem movie={item} key={key} />
-            ))}
-        </div>
+        {isLoading ? (
+          <LoadingScreen loading={isLoading} />
+        ) : (
+          <div className="grid w-full grid-cols-2 gap-5 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-5">
+            {list &&
+              list.map((item: MovieItemType, key) => (
+                <MovieItem movie={item} key={key} />
+              ))}
+          </div>
+        )}
       </div>
     </main>
   );

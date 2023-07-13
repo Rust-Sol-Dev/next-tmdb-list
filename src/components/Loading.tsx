@@ -10,12 +10,12 @@ const LoadingScreen: React.FC<LoadingScreenProps> = ({
   title,
 }) => {
   const opacityClass = loading
-    ? "opacity-100 pointer-events-auto bg-[#0000006e]"
+    ? "opacity-100 pointer-events-auto bg-[#ffffff6e]"
     : "opacity-0 pointer-events-none bg-transparent";
 
   return (
     <div
-      className={`fixed w-full h-screen z-[2000] backdrop-blur-md flex items-center justify-center flex-col duration-200 ${opacityClass}`}
+      className={`fixed left-0 top-0 w-full h-screen z-[2000] backdrop-blur-md flex items-center justify-center flex-col duration-200 ${opacityClass}`}
     >
       <div className="lds-roller">
         {[...Array(8)].map((_, i) => (
