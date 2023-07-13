@@ -16,9 +16,8 @@ const MovieItem: FC<MovieItemProps> = ({ movie }) => {
     <Link href={`/movie/${id}`} passHref>
       <div className="shadow-md cursor-pointer">
         <img
-          src={`https://www.sasuke.dev/projects/project-20.webp`}
-          // src={`https://image.tmdb.org/t/p/w342${poster_path}`}
-          className="opacity h-[360px]"
+          src={`https://image.tmdb.org/t/p/w342${poster_path}`}
+          className=""
           alt=""
         />
         <div className="p-4">

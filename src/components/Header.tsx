@@ -17,7 +17,7 @@ const Header: FC = () => {
                     <Link
                       href={item.link}
                       passHref
-                      className="font-bold"
+                      className="text-sm font-bold lg:text-md"
                       title={item.title}
                     >
                       {item.title}

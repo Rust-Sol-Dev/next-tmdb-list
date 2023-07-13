@@ -8,17 +8,13 @@ export default function TopRated() {
   const [isLoading, setIsLoading] = useState(false);
   const [page, setPage] = useState(1);
   const [movies, setMovies] = useState<MovieItemType[]>([]);
-  const [totalPages, setTotalPages] = useState(1);
+  const [totalPages, setTotalPages] = useState<number>(1);
 
   const getMovieList = async (page: number) => {
     setIsLoading(true);
     const { results, total_pages } = await getMoviesByPage("top_rated", page);
-    if (total_pages) {
-      setTotalPages(total_pages as number);
-    }
-    if (results) {
-      setMovies(results);
-    }
+    setTotalPages(total_pages);
+    setMovies(results);
     setIsLoading(false);
   };
 

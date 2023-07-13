@@ -1,10 +1,5 @@
-import Header from "@/components/Header";
-import MainGrid from "@/components/MainGrid";
-import MovieItem from "@/components/MovieItem";
-import { MovieItem as MovieItemType } from "@/types/movie";
-import { getMoviesByPage } from "@/utils/api";
 import { useRouter } from "next/router";
-import { useEffect, useMemo, useState } from "react";
+import { useEffect } from "react";
 
 export default function Home() {
   const router = useRouter();
