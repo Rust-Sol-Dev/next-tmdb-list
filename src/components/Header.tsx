@@ -39,14 +39,14 @@ export default Header;
 const LINKS = [
   {
     title: "Upcoming",
-    link: "/?movie=upcoming",
+    link: "/upcoming",
   },
   {
     title: "Popular",
-    link: "/?movie=popular",
+    link: "/popular",
   },
   {
     title: "Top Rated",
-    link: "/?movie=top-rated",
+    link: "/top-rated",
   },
 ];
