@@ -25,6 +25,7 @@ This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-opti
 ## Used technologies
 
 - React
+- Next.js
 - React Hooks
 - React Context Provider
 - Axios
